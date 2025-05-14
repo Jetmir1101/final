@@ -1,0 +1,359 @@
+/* styles.css */
+
+/* Reset & base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Ensure body background is black */
+body {
+  font-family: Stencil, Std;
+  background-color: #000; /* Set background to black */
+  color: #fff; /* Text color to white for contrast */
+  line-height: 1.6;
+  margin: 0; /* Remove any margin from the body */
+  padding: 0; /* Remove any padding from the body */
+}
+
+html, body {
+  height: 100%; /* Full height */
+}
+
+/* Ensure sections have a black background */
+section {
+  background-color: #000; /* Set section background to black */
+  padding: 2rem;
+  margin: 0; /* No margin to ensure no white space */
+  border-radius: 0; /* No rounded corners */
+  color: white; /* Text color to white for readability */
+  position: relative;
+}
+
+/* Remove white space around the page */
+main {
+  flex: 1;
+  background-color: #000; /* Black background for the main content */
+}
+
+
+
+/* Navbar */
+.navbar {
+  background: rgba(54.5, 0, 0, 1);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo .logo-image {
+  width: 60px; 
+  margin-top: 0.5rem;
+  mix-blend-mode: multiply;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+.navbar nav ul li a:hover {
+  background: red;
+  border-radius: 5px;
+}
+
+/* Slideshow */
+.slideshow {
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  margin: 2rem auto;
+}
+.slideshow img {
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+.hero-slideshow {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.hero-slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 1rem;
+}
+
+.intro {
+  text-align: center;
+  padding: 2rem;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.section-divider {
+  border: none;
+  height: 2px;
+  width: 60%;
+  background: #ccc;
+  margin: auto;
+}
+
+.membership-offers {
+  text-align: center;
+  padding: 2rem;
+}
+
+.membership-offers h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.offer-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem;
+}
+
+.offer-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: scale(1.05);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.offer-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.under-offer p {
+  font-size: 1.1rem;
+  color: white;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+
+
+
+
+/* Sections */
+section {
+  padding: 2rem;
+  background: url('background.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white; 
+  margin: 1rem;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  border-radius: 10px;
+  z-index: -1;
+}
+
+
+.membership h2 {
+	text-align: center;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 7rem; /* remove spacing */
+  padding: 0; /* remove padding if any */
+  margin: 0 auto;
+  max-width: 900px; /* tighten layout */
+}
+
+.side-image {
+  width: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 0 0.5rem; /* slight space */
+}
+
+.membership form {
+  margin: 0; /* remove extra space */
+}
+
+
+form {
+  flex: 1;
+  max-width: 400px;
+}
+
+/* Form */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+}
+form input, form select, form button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+form button {
+  background: #ff5733;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form button:hover {
+  background: #e74c3c;
+}
+
+/* Store */
+#productList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.product-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.product {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  color: #000; /* <- Add this line */
+}
+
+
+.product-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.store h2 {
+	text-align:center;
+}
+
+/* Google Map */
+.map {
+  height: 300px;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .slideshow img {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .product-row {
+    grid-template-columns: repeat(4, 1fr); /* Still 4 items per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-row {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-row {
+    grid-template-columns: 1fr; /* 1 item per row for very small screens */
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 2rem;
+ 
+}

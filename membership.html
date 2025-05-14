@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership</title>
+  <link rel="stylesheet" href="styling.css">
+  <script src="Javscript.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class = "logo">
+	<h1>Gorilla Gym</h1>
+	<img src="logo.png" alt="Power Gym Logo" class="logo-image" />
+</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="store.html">Store</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <section class="membership">
+  <h2>Join Our Gym</h2>
+  <div class="form-wrapper">
+    <img src="flexing.png" alt="Left Gym Image" class="side-image left">
+    
+    <form id="membershipForm">
+      <label>Name: <input type="text" name="name" required></label><br>
+      <label>Email: <input type="email" name="email" required></label><br>
+      <label>Age: <input type="number" name="age" required></label><br>
+      <label>Plan:
+        <select name="plan">
+          <option value="monthly">Monthly</option>
+		  <option value="Quarterly">Quarterly</option>
+          <option value="yearly">Yearly</option>
+		  
+        </select>
+      </label><br>
+      <button type="submit">Submit</button>
+    </form>
+
+    <img src="flexing2.png" alt="Right Gym Image" class="side-image right">
+  </div>
+</section>
+  </main>
+  <footer>
+    <p>&copy; all rights belong to Gorilla Gym</p>
+  </footer>
+</body>
+</html>
