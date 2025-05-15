@@ -94,3 +94,9 @@ for (let i = 0; i < limitedProducts.length; i += 4) {
 
   productList.appendChild(row);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("map")) {
+    initMap();
+  }
+});
