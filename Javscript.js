@@ -19,13 +19,18 @@ setInterval(() => {
 
 
 function initMap() {
-  const gymLocation = { lat: 40.6800, lng: -74.0000 }; 
-  const map = new google.maps.Map(document.getElementById("map"), {
+  const mapContainer = document.getElementById("map");
+  mapContainer.innerHTML = ""; // Clear previous content (if any)
+
+  const gymLocation = { lat: 40.68, lng: -74.0 };
+  const map = new google.maps.Map(mapContainer, {
     zoom: 14,
     center: gymLocation,
   });
+
   new google.maps.Marker({ position: gymLocation, map });
 }
+
 
 
 const form = document.getElementById("membershipForm");
