@@ -32,6 +32,18 @@ function initMap() {
 }
 
 
+if (document.getElementById("map")) {
+  window.initMap = function () {
+    const gymLocation = { lat: 40.68, lng: -74.0 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 14,
+      center: gymLocation,
+    });
+    new google.maps.Marker({ position: gymLocation, map });
+  };
+}
+
+
 
 const form = document.getElementById("membershipForm");
 if (form) {
